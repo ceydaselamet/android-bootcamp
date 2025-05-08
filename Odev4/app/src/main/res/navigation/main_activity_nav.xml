@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ceyda.androidbootcampodev.odev4.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/homeToA"
+            app:destination="@id/AFragment" />
+        <action
+            android:id="@+id/homeToX"
+            app:destination="@id/XFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.ceyda.androidbootcampodev.odev4.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/aToB"
+            app:destination="@id/BFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/XFragment"
+        android:name="com.ceyda.androidbootcampodev.odev4.XFragment"
+        android:label="fragment_x"
+        tools:layout="@layout/fragment_x" >
+        <action
+            android:id="@+id/xToY"
+            app:destination="@id/YFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.ceyda.androidbootcampodev.odev4.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/bToY"
+            app:destination="@id/YFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/YFragment"
+        android:name="com.ceyda.androidbootcampodev.odev4.YFragment"
+        android:label="fragment_y"
+        tools:layout="@layout/fragment_y" />
+</navigation>
