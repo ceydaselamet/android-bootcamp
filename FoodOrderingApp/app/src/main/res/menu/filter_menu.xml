@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_fiyat_artan"
+        android:title="Fiyata Göre Artan" />
+    <item
+        android:id="@+id/action_fiyat_azalan"
+        android:title="Fiyata Göre Azalan" />
+    <item
+        android:id="@+id/action_filtreyi_temizle"
+        android:title="Filtreyi Temizle" />
+</menu>

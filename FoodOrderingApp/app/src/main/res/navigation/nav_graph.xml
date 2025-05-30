@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/yemeklerFragment">
+
+    <fragment
+        android:id="@+id/yemeklerFragment"
+        android:name="com.ceyda.androidbootcampodev.foodorderingapp.ui.fragment.YemeklerFragment"
+        android:label="Yemekler"
+        tools:layout="@layout/fragment_yemekler">
+        <action
+            android:id="@+id/action_yemeklerFragment_to_yemekDetayFragment"
+            app:destination="@id/yemekDetayFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.ceyda.androidbootcampodev.foodorderingapp.ui.fragment.SepetFragment"
+        android:label="Sepet"
+        tools:layout="@layout/fragment_sepet">
+        <action
+            android:id="@+id/sepetToYemekDetay"
+            app:destination="@id/yemekDetayFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/yemekDetayFragment"
+        android:name="com.ceyda.androidbootcampodev.foodorderingapp.ui.fragment.YemekDetayFragment"
+        android:label="Yemek Detay"
+        tools:layout="@layout/fragment_yemek_detay">
+        <argument
+            android:name="yemek"
+            app:argType="com.ceyda.androidbootcampodev.foodorderingapp.data.entity.Yemekler" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/orderSuccessDialogFragment"
+        android:name="com.ceyda.androidbootcampodev.foodorderingapp.ui.fragment.OrderSuccessDialogFragment"
+        android:label="Sipariş Başarılı" />
+</navigation>
